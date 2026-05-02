@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function StudentCard({ student, onDelete }) {
   const { id, name, age, email, city = 'Unknown' } = student
 
@@ -15,6 +16,14 @@ export default function StudentCard({ student, onDelete }) {
         </div>
       </div>
       <div className="sma-card-actions">
+        {/* Edit button — Link to the edit page with this student's id */}
+        <Link
+          to={`/students/${id}/edit`}
+          className="sma-btn-icon sma-btn-icon-edit"
+          title="Edit student"
+        >
+          ✎
+        </Link>
         <button
           className="sma-btn-icon sma-btn-icon-delete"
           onClick={() => onDelete(id)}

@@ -28,6 +28,7 @@ export default function Header() {
         <button className="sma-btn-logout" onClick={handleLogout}>
           Sign Out
         </button>
+        <Link to="/ai" className="sma-nav-link">AI Assistant</Link>
       </nav>
     </header>
   )
